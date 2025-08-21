@@ -19,7 +19,7 @@ B) Standardi käsittelee sovellusturvallisuuden hallintaa. Standardissa esitetä
 
 C) Podcastin väittämät korostavat, että täydellistä tietoturvaa ei ole olemassa ja että hallinnollinen tietoturva on oleellista teknisen onnistumisen kannalta.
 
-C) Varmistan että virtuaali koneeni on varmasti eristetty pääverkosta, vähennän virtuaali koneen resurssien käytön mikä vähentää mahdollisesti haittaohjelmien liiallisen leviämisen. 
+D) Varmistan että virtuaali koneeni on varmasti eristetty pääverkosta, vähennän virtuaali koneen resurssien käytön mikä vähentää mahdollisesti haittaohjelmien liiallisen leviämisen. 
 
 Lisään palomuuri sääntöjä sisään ja ulos menevälle liikenteelle. Voin suodattaa mikä pääsee sisään ja sitten automaattisesti estää kaikki muu liikkenne.
 
