@@ -7,7 +7,7 @@ OS: Debian GNU/Linux 12 Bookworm
 Browser: Firefox 128.3.1esr (64-bit)
 
 Hardware Model: VMWare Workstation Pro
-Memory: 4.0 GiB
+Memory: 4.0 GB
 
 Processor: AMD Ryzen  3 7320U - 4 cores used
 
@@ -33,9 +33,6 @@ Ensimmäisessä tehtävässä muutin input type kohdan tyhjäksi, jotta sinne vo
 
 Testasin sen jälkeen ' OR 1=1-- teksti kenttään minkä opin edellisellä tunnilla. Vastaukseksi tuli "foo". Olin oikeilla jäljillä, jes! sitten lähdin lukemaan portswiggeristä ja youtubesta vähän tietoa SQL injectiosta. 
 
-
-
-Lähteet: <a href="https://portswigger.net/web-security/sql-injection/union-attacks" target="_blank">Portswigger</a>
 
 
 <img width="738" height="332" alt="Foo_password" src="https://github.com/user-attachments/assets/c9fd9c41-7443-4948-9e9f-dafbd2f67239" />
@@ -71,7 +68,6 @@ ________________________________________________________________________________
  Tein saman jutun kuin siinä ffuf tehtävässä. Suodatin 132 ja löysin sivun nimeltä admin-console. Pistin testiin ja kappas. Pääsin sisään 😁
  Eli mitä tossa nyt tapahtui oli että piti olla sisäänkirjautuneena ja sitten sieltä hakukoneesta muuttaa se sivu ja tadaa you're in.
 
- Lähteet mitä käytin: <a href="https://terokarvinen.com/hack-n-fix/" target="_blank">Hack'n Fix </a>, <a href="https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/" target="_blank">Terokarvinen</a>
  
 <img width="857" height="817" alt="Screenshot 2025-08-28 234750" src="https://github.com/user-attachments/assets/a9f9a1be-e3d3-4d4a-8fed-f24533902d97" />
 
@@ -79,7 +75,23 @@ ________________________________________________________________________________
 
 <img width="1173" height="356" alt="admin-console-page" src="https://github.com/user-attachments/assets/6c871b43-cd81-43d0-9f86-40d1313881df" />
 
+## Korjaa 020-your-eyes-only haavoittuvuus. Osoita testillä, että ratkaisusi toimii
+
+Huomasin että viimeisestä funktiosta puuttui "self.request.user.is_staff" mikä löytyy hats --> views.py tiedostosta.
 
 
 
+<img width="793" height="568" alt="0_20FIx" src="https://github.com/user-attachments/assets/8a6b7dec-acbe-4652-9788-c22c17dd7cee" />
 
+<img width="1435" height="951" alt="Evidence_0_20" src="https://github.com/user-attachments/assets/4adbb91c-06c6-474e-b282-cff4c8ef8f3a" />
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Tein yhden vapaaehtoisen tehtävän mikä edesauttoi 010 tehtävän etenemistä 
+
+<img width="1082" height="631" alt="portswig1" src="https://github.com/user-attachments/assets/db658e64-62ae-4604-a599-c4aa3af6ba11" />
+
+## Lähteet: 
+Lähteet: <a href="https://portswigger.net/web-security/sql-injection/union-attacks" target="_blank">Portswigger</a>
+<a href="https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/" target="_blank">Terokarvinen</a>
+<a href="https://terokarvinen.com/hack-n-fix/" target="_blank">Hack'n Fix </a>
