@@ -35,7 +35,7 @@ Testasin sen jälkeen ' OR 1=1-- teksti kenttään minkä opin edellisellä tunn
 
 
 
-<a href="https://portswigger.net/web-security/sql-injection/union-attacks" target="_blank">Portswigger</a>
+Lähteet: <a href="https://portswigger.net/web-security/sql-injection/union-attacks" target="_blank">Portswigger</a>
 
 
 <img width="738" height="332" alt="Foo_password" src="https://github.com/user-attachments/assets/c9fd9c41-7443-4948-9e9f-dafbd2f67239" />
@@ -63,8 +63,23 @@ Ratkaisuna tähän luotiin erillinen muuttuja nimeltä pin2, johon käyttäjän 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 <img width="1038" height="951" alt="FuzzEvidencee" src="https://github.com/user-attachments/assets/1475306c-fad0-424c-9eb8-458ac15efdd6" />
+<img width="553" height="51" alt="Screenshot 2025-08-28 231056" src="https://github.com/user-attachments/assets/974c85e4-4bf2-4be8-beed-be52338ae8b6" />
 <img width="906" height="472" alt="Fuzz2 1" src="https://github.com/user-attachments/assets/f50c39fb-52ef-45dd-90a8-d79505bd8c65" />
 <img width="831" height="412" alt="Fuzz2 0" src="https://github.com/user-attachments/assets/1bca1c86-a39e-4718-bcef-994002323a8f" />
+
+ ## Murtaudu 020-your-eyes-only
+ Tein saman jutun kuin siinä ffuf tehtävässä. Suodatin 132 ja löysin sivun nimeltä admin-console. Pistin testiin ja kappas. Pääsin sisään 😁
+ Eli mitä tossa nyt tapahtui oli että piti olla sisäänkirjautuneena ja sitten sieltä hakukoneesta muuttaa se sivu ja tadaa you're in.
+
+ Lähteet mitä käytin: <a href="https://terokarvinen.com/hack-n-fix/" target="_blank">Hack'n Fix </a>, <a href="https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/" target="_blank">Terokarvinen</a>
+ 
+<img width="857" height="817" alt="Screenshot 2025-08-28 234750" src="https://github.com/user-attachments/assets/a9f9a1be-e3d3-4d4a-8fed-f24533902d97" />
+
+
+
+<img width="1173" height="356" alt="admin-console-page" src="https://github.com/user-attachments/assets/6c871b43-cd81-43d0-9f86-40d1313881df" />
+
+
 
 
 
