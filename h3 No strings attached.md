@@ -29,8 +29,23 @@ Lähin testaamaan tätä tehtävää strings komennolla. Näin sen "salasanan", 
 <img width="542" height="558" alt="piilosan" src="https://github.com/user-attachments/assets/45555f55-72cd-4b01-abae-19ef053421ee" />
 <img width="560" height="110" alt="nope" src="https://github.com/user-attachments/assets/66653c82-2cd0-434e-8794-6a1eef84f100" />
 
-Sitten seuraavaksi mä vähän ajattelin että se salasana oli joku hämäys, että se oikea olikin joku muu tossa strings listassa. About 15 minuutin arvailun ja katsomisen jälkeen huomasin tämän erittäin tärkeän vihjeen!
+Sitten seuraavaksi ajattelin että se salasana oli joku hämäys, että se oikea olikin joku muu tossa strings listassa. About 15 minuutin arvailun ja katsomisen jälkeen huomasin tämän erittäin tärkeän vihjeen!
 
 <img width="623" height="42" alt="important tip" src="https://github.com/user-attachments/assets/da3131e6-08fc-4f69-927d-c06ae0741299" />
 
-Lähdin saman tien etsimään netistä tietoa että mikä tämä oikein on <a href=" https://linux.die.net/man/1/upx" target="_blank"> Linux man page</a>
+Lähdin saman tien etsimään netistä tietoa että mikä tämä oikein on <a href="https://linux.die.net/man/1/upx" target="_blank">Linux man page</a>, <a href="https://upx.github.io/" target="_blank">UPX selitys</a> 
+
+Sain selville että UPX on työkalu, joka pakkaa suoritettavan ohjelman tiedoston pienempään kokoon. Tämä tarkoittaa sitä, että ohjelman koodi ja tiedot pakataan tiiviisti ja puretaan vasta ajon aikana. Tämän seurauksena ohjelman sisältö, kuten salasanat ja liput näkyivät vain puoliksi binäärissä tai "strings-" komennon tulosteessa. UPX auttaa suojaamaan ohjelmaa analysoinnilta.
+
+Sitten ajoin tämän komennon "upx -d packd"
+
+<img width="531" height="347" alt="upx" src="https://github.com/user-attachments/assets/253b8c52-03ba-4a42-baad-c0f087a0738b" />
+
+Kuten huomaatte, tiedoston koko meni 5900 ---> 25263, eli nyt meillä on se tiedosto kokonaan purettu ja voidaan testata "strings" komentoa uudestaan.
+
+<img width="1075" height="475" alt="test evidence" src="https://github.com/user-attachments/assets/6e2d8a43-6de0-459b-abb4-b6f0f84755db" />
+
+<img width="553" height="61" alt="piilos-Ananas" src="https://github.com/user-attachments/assets/f91de935-473c-4b6f-aec1-f644116ecb13" />
+
+Tadaa sieltä se oikea salasana napsahti ja saatiin se lippu!
+
