@@ -49,3 +49,7 @@ Kuten huomaatte, tiedoston koko meni 5900 ---> 25263, eli nyt meillä on se tied
 
 Tadaa sieltä se oikea salasana napsahti ja saatiin se lippu!
 
+## Lähteet
+<a href="https://linux.die.net/man/1/upx" target="_blank">Linux man page</a>, <a href="https://upx.github.io/" target="_blank">UPX selitys</a>,  <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>
+
+
