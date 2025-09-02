@@ -33,4 +33,4 @@ Sitten seuraavaksi mä vähän ajattelin että se salasana oli joku hämäys, et
 
 <img width="623" height="42" alt="important tip" src="https://github.com/user-attachments/assets/da3131e6-08fc-4f69-927d-c06ae0741299" />
 
-Lähdin saman tien etsimään netistä tietoa että mikä tämä oikein on https://linux.die.net/man/1/upx
+Lähdin saman tien etsimään netistä tietoa että mikä tämä oikein on <a href=" https://linux.die.net/man/1/upx" target="_blank"> Linux man page</a>
