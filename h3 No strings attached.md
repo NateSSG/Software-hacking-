@@ -1,5 +1,18 @@
 # h3 No strings attached | Nathaniel Ssendagire 2.9.2025
 
+## Ympäristö
+
+OS: Debian GNU/Linux 12 Bookworm
+
+Browser: Firefox 128.3.1esr (64-bit)
+
+Hardware Model: VMWare Workstation Pro Memory: 4.0 GB
+
+Processor: AMD Ryzen 3 7320U - 4 cores used
+
+Disk: 35 GB
+
+Network: NAT
 
 ## a) Strings. Lataa ezbin-challenges.zip Aja 'passtr'. Selvitä oikea salasana 'strings' avulla. Selvitä myös lippu. (Ensisijaisesti katsomatta sorsia, jos osaat.)
 
