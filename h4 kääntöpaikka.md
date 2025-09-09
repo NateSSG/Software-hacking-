@@ -104,7 +104,7 @@ Kun suoritin tiedostoa niin se pyysi salasanaa ja tietenkin jos laittaa väärä
 
 <img width="190" height="128" alt="passtr_file_og" src="https://github.com/user-attachments/assets/0f44f336-f8eb-43fb-8ea1-7c098c1805f1" />
 
-Seuraavaksi miten sain sen sanomaan että salasana on oikein kunhan kirjoittaa mitä vain mikä ei ole se itse oikea salasana oli aika yksinkertaista, klikkaa koodissa / Decompile:mainissa sitä if functiota, niin se vie sut suoraan siihen kohtaan missä sen tarkistuksen voi muokata.  poistin "JNZ" N kirjaimen pois ja sitten se alko toimimaan. 
+Se, miten sain ohjelman hyväksymään minkä tahansa salasanan (kunhan se ei ollut juuri se oikea salasana). Ratkaisu oli aika yksinkertainen: koodissa / Decompile:main -kohdassa klikkasin sitä if-funktiota, jolloin pääsin suoraan siihen osaan, jossa salasanaa tarkistetaan. Siellä muokkasin ehtoa poistamalla käskystä "JNZ"-komennon kirjaimen N pois. Tämän muutoksen jälkeen ohjelma alkoi hyväksyä salasanan.
 
 ## Selitys
 
