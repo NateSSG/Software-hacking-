@@ -256,4 +256,5 @@ Lähteet: https://terokarvinen.com/sovellusten-hakkerointi/#h4-kaantopaikka-tero
 
 
 
- <a href="https://terokarvinen.com/sovellusten-hakkerointi/#h4-kaantopaikka-tero" target="_blank">Tero Karvinen</a>, <a href="https://upx.github.io/" target="_blank">
+ <a href="https://terokarvinen.com/sovellusten-hakkerointi/#h4-kaantopaikka-tero" target="_blank">Tero Karvinen</a>, <a href="https://github.com/NoraCodes/crackmes/tree/master" target="_blank">Nora Codes </a>, <a href=" https://stackoverflow.com/questions/67933602/what-is-undefined-function-when-i-use-ghidra-to-dissemble-a-so-file
+" target="_blank">Stack overflow</a>
