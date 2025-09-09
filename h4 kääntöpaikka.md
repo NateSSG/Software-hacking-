@@ -15,7 +15,17 @@ Network: NAT
 
 ## a) Asenna Ghidra.
 
-Asensin Ghidran tällä komennolla "sudo apt-get install ghidra. Käytän kali linuxia niin se lataus toimi sillä.
+- Asensin Ghidran tällä komennolla "sudo apt-get install ghidra. Käytän kali linuxia niin se lataus toimi sillä.
+
+## x) Lue/katso/kuuntele ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva.)
+
+- Tekijä selittää asiat rennosti ja vaihe vaiheelta, mikä tekee videosta helposti seurattavan, vaikka kaikki työkalut eivät olisi entuudestaan tuttuja.
+
+- Oli mielenkiintoista nähdä, miten ensin kokeiltiin yksinkertaisia komentoja ja sitten siirryttiin raskaampaan työkaluun (Ghidra), kun se oli tarpeen.
+
+- Huomasin, että reverse engineeringissä tärkeintä ei ole heti tietää kaikkea, vaan uskaltaa kokeilla ja opetella yrityksen ja erehdyksen kautta.
+
+- Videosta jää fiilis, että vaikka Ghidra näyttää monimutkaiselta, sen kanssa oppii parhaiten vain käyttämällä sitä rohkeasti käytännössä.
 
 ## b) rever-C. Käänteismallinna packd-binääri C-kielelle Ghidralla. Etsi pääohjelma. Anna muuttujielle kuvaavat nimet. Selitä ohjelman toiminta. Ratkaise tehtävä binääristä, ilman alkuperäistä lähdekoodia
 <img width="480" height="567" alt="Packdrever" src="https://github.com/user-attachments/assets/f5c35f43-9cbd-4ff6-a2a6-50d5a0c5eba2" />
@@ -253,4 +263,4 @@ Rivit 19-20: Onnistumishaara
 Ohjelma vaatii, että salasana on muodostettu vähentämällä jokaisesta merkkijonon "password1" kirjaimesta yksi ASCII-arvo.
 
 ## Lähteet
- <a href="https://terokarvinen.com/sovellusten-hakkerointi/#h4-kaantopaikka-tero" target="_blank">Tero Karvinen</a>, <a href="https://github.com/NoraCodes/crackmes/tree/master" target="_blank">Nora Codes </a>, <a href="https://stackoverflow.com/questions/67933602/what-is-undefined-function-when-i-use-ghidra-to-dissemble-a-so-file" target="_blank">Stack Overflow</a>
+ <a href="https://terokarvinen.com/sovellusten-hakkerointi/#h4-kaantopaikka-tero" target="_blank">Tero Karvinen</a>, <a href="https://github.com/NoraCodes/crackmes/tree/master" target="_blank">Nora Codes </a>, <a href="https://stackoverflow.com/questions/67933602/what-is-undefined-function-when-i-use-ghidra-to-dissemble-a-so-file" target="_blank">Stack Overflow</a>, <a href="https://www.youtube.com/watch?v=oTD_ki86c9I" target="_blank">GHIDRA for Reverse Engineering</a>
