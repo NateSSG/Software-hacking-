@@ -147,4 +147,109 @@ Oikea vastaus on siis mikä tahansa salasana, joka ei ole password-alkuinen. Esi
 
 - abc
 ## e) Nora crackme01e. Ratkaise binääri
+<img width="583" height="497" alt="crackme01e_explanation" src="https://github.com/user-attachments/assets/4cef264c-30e1-43ad-8d8a-d95bf04abd81" />
+
+## Mitä ohjelma tekee?
+Tämä ohjelma on salasanantarkistin, joka vaatii salasanan komentoriviparametrina. Toisin kuin edellinen, se hyväksyy salasanan vain, jos se alkaa merkeillä "slm!paas.k". Ohjelma vertailee syötettä vain tämän merkkijonon pituuden verran, joten oikea salasana on slm!paas.k (tai jokin pidempi merkkijono, joka alkaa näillä merkeillä).
+
+## Selitys Riviltä
+
+if (param_1 == 2) {
+- Tarkistaa, että ohjelmalle on annettu tasan yksi komentoriviparametri (esim. ./ohjelma salasana). param_1 on argumenttien määrä (argc).
+
+_n = strlen("slm!paas.k");
+
+- Laskee merkkijonon "slm!paas.k" pituuden. Tulos on 10 (merkit s-l-m-!-p-a-a-s-.k).
+
+iVar1 = strncmp(..., "slm!paas.k", _n);
+
+- Vertaa käyttäjän antamaa salasanaa (param_2 + 8 on argv[1]) oikeaan salasanaan "slm!paas.k".
+
+- Vertailu tehdään vain ensimmäisten 10 merkin osalta (_n on 10).
+
+if (iVar1 == 0) {
+
+- Jos vertailun tulos on 0, eli käyttäjän syötteen 10 ensimmäistä merkkiä olivat "slm!paas.k", ohjelma suorittaa OIKEAN salasanan haaran.
+
+- Tämä on suora vastakohta edelliselle ohjelmalle. Tässä ohjelmassa strncmp-vertailun onnistuminen tarkoittaa hyväksymistä.
+
+Haarat:
+
+- if-haara (vertailu == 0): Tulostaa "Yes, %s is correct!\n". Tämä on oikea vastaus.
+
+- else-haara (vertailu != 0): Tulostaa "No, %s is not correct.\n". Tämä on väärä vastaus.
+
+## Yhteenveto / Vastaus
+
+Ohjelma haluaa, että salasana alkaa merkeillä "slm!paas.k".
+
+Ainoa oikea vastaus on siis salasana:
+slm!paas.k
+
+Ohjelma vertailee vain 10 ensimmäistä merkkiä, joten salasana voi olla myös pidempi (esim. slm!paas.k123), mutta lyhyehkö slm!paas.k riittää.
+
+Aja ohjelma komennolla: ./crackme01e slm!paas.k
+
+Ohjelma vastaa: Yes, slm!paas.k is correct!
+
+## f) Nora crackme02. Nimeä pääohjelman muuttujat käänteismallinnetusta binääristä ja selitä ohjelman toiminta. Ratkaise binääri.
+
+<img width="728" height="478" alt="crackme02_OG" src="https://github.com/user-attachments/assets/dd63cade-4298-4899-8e35-a191a21f4612">
+
+## Korjattu koodi
+
+<img width="741" height="562" alt="crackme02_fixed_code" src="https://github.com/user-attachments/assets/60a437ff-9c8d-444f-9354-36dc207876da" />
+
+Tässä käänsin koodin ymmärrettävämpään muotoon. Tässä on lista niistä muuttujista mitkä vaihdoin ja syy nimeämiselle.
+
+param_1 → num_args → "Komentoriviparametrien määrä"
+- Tämä kertoo, kuinka monta argumenttia ohjelmalle annettiin.
+- Sama kuin argc normaalissa C-koodissa.
+
+param_2 → args_ptr → "Osoitin argumenttitaulukkoon (argv)"
+- Tämä on osoitin taulukkoon, jossa kaikki argumentit ovat.
+- Sama kuin argv normaalissa C-koodissa. Esim. argv[1] on käyttäjän antama salasana.
+
+uVar1 → exit_code → "Ohjelman paluuarvo"
+- Tähän tallennetaan ohjelman lopullinen palautusarvo.
+- Jos se on 0, ohjelma päättyy onnistuneesti. Jos 1 tai -1, se kertoo virheestä.
+
+local_c → char_index → "Merkkien indeksi silmukassa"
+- Tätä käytetään laskurina for-silmukassa, kun vertaillaan annettua salasanaa ja kovakoodattua merkkijonoa merkki kerrallaan.
+
+Ylemmässä kuvassa ennen omia muutoksiani molemmissa print tulostuksissa on "undefined8".  Undefined8 Ghidrassa ei ole muuttuja, vaan tyyppimerkintä. Se tarkoittaa 8 tavun kokoista arvoa (64 bittiä), jonka tarkkaa tyyppiä Ghidra ei osaa päätellä. Siksi sitä käytetään esimerkiksi silloin, kun ohjelma käsittelee joko 64-bittisiä lukuja tai osoittimia (kuten char *). char olisi vain yhden tavun kokoinen, joten se ei käy osoittimille. Kun Ghidra näyttää esimerkiksi printf(char * __format, undefined8), se ei tiedä että toinen argumentti on merkkijono-osoitin (char *), joten mun piti tehdä override-signature ja vaihtaa se oikeaksi.
+
+<img width="877" height="177" alt="char_override" src="https://github.com/user-attachments/assets/8d4c35fc-d6d5-41eb-a667-6eac3582bc4a" />
+
+## Mitä ohjelma tekee?
+
+Ohjelma tarkistaa komentoriviparametrina annetun salasanan. Se vertaa sitä kirjain kirjaimelta vääntämällä oikeaa salasanaa "password1".
+
+## Rivi Riviltä -selitys
+
+Rivi 8: if (num_args == 2) {
+- Tarkistaa, onko annettu tasan yksi komentoriviparametri (ohjelman nimi on ensimmäinen).
+
+Rivit 9-12: for-silmukka
+
+- Käy läpi jokainen kirjain käyttäjän syötteessä ja vertailussa käytettävässä merkkijonossa "password1" (esim. 'p', 'a', 's', ...), kunnes törmää merkkijonon loppuun.
+
+Rivi 13: if ("password1"[char_index] + -1 != ... ) {
+
+- Tämän ohjelman ydin: Se vertaa käyttäjän kirjainta kohdassa char_index merkkijonon "password1" vastaavaan kirjaimeen, josta on vähennetty 1 ASCII-arvoltaan.
+
+- Esimerkki: Ensimmäinen kirjain 'p' (ASCII 112) muuttuu arvoksi 'o' (111). Käyttäjän syötteen ensimmäisen kirjaimen täytyy siis olla 'o'.
+
+Rivit 14-17: Virhehaara
+
+- Jos jokin käyttäjän kirjaimista ei täsmää edellisessä vaiheessa laskettuun odotettuun kirjaimeen, ohjelma tulostaa virheviestin ja päättyy välittömästi.
+
+Rivit 19-20: Onnistumishaara
+
+- Jos kaikki kirjaimet täsmäävät sääntöön (käyttäjän kirjain = "password1"[sama paikka] - 1), tulostetaan onnistumisviesti.
+
+## Yhteenveto / Oikea salasana
+
+Ohjelma vaatii, että salasana on muodostettu vähentämällä jokaisesta merkkijonon "password1" kirjaimesta yksi ASCII-arvo.
+
 
