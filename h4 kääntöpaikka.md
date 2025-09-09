@@ -252,8 +252,5 @@ Rivit 19-20: Onnistumishaara
 
 Ohjelma vaatii, että salasana on muodostettu vähentämällä jokaisesta merkkijonon "password1" kirjaimesta yksi ASCII-arvo.
 
-Lähteet: https://terokarvinen.com/sovellusten-hakkerointi/#h4-kaantopaikka-tero, https://github.com/NoraCodes/crackmes/tree/master, https://stackoverflow.com/questions/67933602/what-is-undefined-function-when-i-use-ghidra-to-dissemble-a-so-file
-
-
-
+## Lähteet
  <a href="https://terokarvinen.com/sovellusten-hakkerointi/#h4-kaantopaikka-tero" target="_blank">Tero Karvinen</a>, <a href="https://github.com/NoraCodes/crackmes/tree/master" target="_blank">Nora Codes </a>, <a href="https://stackoverflow.com/questions/67933602/what-is-undefined-function-when-i-use-ghidra-to-dissemble-a-so-file" target="_blank">Stack Overflow</a>
