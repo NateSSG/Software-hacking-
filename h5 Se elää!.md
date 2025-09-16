@@ -287,4 +287,4 @@ while (n > 1) {
 
 <a href="https://hhmoodle.haaga-helia.fi/pluginfile.php/4346435/mod_folder/content/0/GDB%20Cheat%20Sheet.pdf?forcedownload=1" target="_blank">Lari_GDP_Cheat_Sheet</a>
 
-<a href="https://visualgdb.com/gdbreference/commands/" target="_blank">GDB_Dokumentaatio</a>
+<a href="https://help.x64dbg.com/en/latest/commands/" target="_blank">DBG_Dokumentaatio</a>
