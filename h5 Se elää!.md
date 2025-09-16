@@ -152,5 +152,12 @@ Näin päädyttiin onnistumispolulle, joka alkaa kohdasta main+137.
 
 ## Miten sain lipun esiin
 
-Kun olin onnistumispolulla, tein:
+Kun olin onnistumispolulla, tein: 
+
+si         ; step into EaseEAs
+finish     ; palataan takaisin pääohjelmaan
+x/s $rbx   ; näytetään lippu muistista
+continue   ; annetaan ohjelman tulostaa lippu
+
+Lippu oli tallennettu muistipaikkaan rbx, joka osoitti puskuria rsp+0x30. Tämä oli se paikka, johon EaseEAs kirjoitti lopullisen lipun.
 
