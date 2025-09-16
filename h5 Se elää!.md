@@ -206,3 +206,20 @@ Kuten mainitsin edellisessä tehtävässä nuo # merkityt numerot ovat stringej�
 
 
 <img width="461" height="115" alt="login_successfull lab04" src="https://github.com/user-attachments/assets/8874a7a6-83a3-4e9c-8760-f05df0e265d1" />
+
+## Main.cpp
+
+Tässä tehtävässä suoritus ei toiminut laisinkaan eikä myöskään debugger joten piti vilkaista koodia ja selvittää että mikä siinä nyt oikein on. 
+
+
+<img width="275" height="482" alt="main_bad code" src="https://github.com/user-attachments/assets/ab86e7cd-116e-4feb-9b56-242ca06e2134" />
+
+## Miksi alkuperäinen koodi ei toiminut
+
+- Puuttuvat aaltosulkeet {} C++ vaatii aaltosulkeet määrittämään, mitkä rivit kuuluvat funktion sisälle. Ilman niitä kääntäjä ei tiedä, mikä kuuluu main()-funktioon tai factorial()-funktioon.
+
+- Virheellinen kertomalogiikka Silmukka while(n--) vähentää n:n ennen kuin se kerrotaan. Esimerkiksi factorial(5) laskee: result = 1 × 4 × 3 × 2 × 1 × 0 = 0 Lopputulos on siis aina nolla, mikä on väärin.
+
+- Mahdollisesti puuttuvat kirjastot Jos #include <iostream> ja using namespace std; puuttuvat, cin ja cout eivät toimi, koska ne eivät ole määriteltyinä.
+
+
