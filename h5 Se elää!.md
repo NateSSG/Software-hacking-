@@ -17,6 +17,35 @@ Ensiksi suoritin koodin. Huomasin että koodissa lasku numero on 0 element 5 koh
 
 <img width="595" height="393" alt="lab 0 ss" src="https://github.com/user-attachments/assets/5cc18382-f9e0-4f01-acbe-7719114622aa" />
 
-<img width="671" height="358" alt="lab00 buggy_code" src="https://github.com/user-attachments/assets/8adb2db1-c104-4622-b0cf-e8e111eced1e" />
+<img width="671" height="358" alt="lab00 buggy_code" src="https://github.com/user-attachments/assets/603a9cb4-6256-4063-bd56-19a85436a9b9" />
 
-<img width="453" height="78" alt="lab00 issue shown" src="https://github.com/user-attachments/assets/065c0c8a-7729-439b-99ff-a9f6fd0a21d0" />
+##Korjattu koodi
+
+
+
+#include <stdio.h>
+- Tuo mukaan standardikirjaston, joka sisältää printf-funktion. Sitä käytetään tulostamiseen.
+
+void fixed_function(int *arr, int size) {
+- Määrittelee funktion nimeltä fixed_function, joka ottaa vastaan kokonaislukutaulukon osoittimen (arr) ja taulukon koon (size).
+- 
+for (int i = 0; i < size; i++) {
+- Aloittaa silmukan, joka käy läpi taulukon alkiot indeksistä 0 aina size - 1:een. Tämä estää virheellisen pääsyn taulukon ulkopuolelle.
+
+printf("Element %d: %d\n", i, arr[i]);
+-Tulostaa jokaisen taulukon alkion muodossa: "Elementti [indeksi]: [arvo]".
+
+}
+-Päättää silmukan ja funktion.
+
+int main() {
+- Ohjelman aloituspiste.
+  
+int numbers[] = {1, 2, 3, 4, 5};
+- Luo taulukon nimeltä numbers, jossa on viisi kokonaislukua.
+- 
+fixed_function(numbers, 5);
+- Kutsuu fixed_function-funktiota ja antaa sille taulukon sekä sen koon (5).
+return 0;
+
+Päättää ohjelman ja palauttaa arvon 0, mikä tarkoittaa onnistunutta suoritusta.
