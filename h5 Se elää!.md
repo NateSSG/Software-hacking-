@@ -13,7 +13,7 @@ Disk: 35 GB
 
 Network: NAT
 ## Lab 0
-Ensiksi suoritin koodin. Huomasin että koodissa lasku numero on 0 element 5 kohdalla. Tarkoittaa sitä että koodi epäonnistuu, koska silmukka menee yhden askeleen liian pitkälle ja yrittää lukea taulukon ulkopuolelta. Tämä johtaa virheelliseen tulostukseen tai ohjelman kaatumiseen.
+Ensiksi suoritin koodin. Huomasin että koodissa lasku numero on 0 element 5 kohdalla. Pistin DBG:n tulille ja kirjoitin "start". Debuggeri pysähtyi ja ilmoitti ongelman mikä oli rivillä 10. Tarkoittaa sitä että koodi epäonnistuu, koska silmukka menee yhden askeleen liian pitkälle ja yrittää lukea taulukon ulkopuolelta. Tämä johtaa virheelliseen tulostukseen tai ohjelman kaatumiseen.
 
 <img width="595" height="393" alt="lab 0 ss" src="https://github.com/user-attachments/assets/5cc18382-f9e0-4f01-acbe-7719114622aa" />
 
