@@ -230,6 +230,9 @@ Tässä tehtävässä suoritus ei toiminut laisinkaan eikä myöskään debugger
 
 - Tarvittavat kirjastot on mukana, joten cin ja cout toimivat oikein.
 
+<img width="341" height="480" alt="main_fixed code" src="https://github.com/user-attachments/assets/9f8bcf1f-42e6-485d-9fd0-eb2c53753886" />
+
+
 ## Rivi riviltä selitys korjatusta koodista
 
 #include <iostream>
