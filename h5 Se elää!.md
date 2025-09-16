@@ -19,8 +19,9 @@ Ensiksi suoritin koodin. Huomasin että koodissa lasku numero on 0 element 5 koh
 
 <img width="671" height="358" alt="lab00 buggy_code" src="https://github.com/user-attachments/assets/603a9cb4-6256-4063-bd56-19a85436a9b9" />
 
-##Korjattu koodi
+## Korjattu koodi
 
+<img width="442" height="328" alt="lab00 fixed_code" src="https://github.com/user-attachments/assets/ce83bea8-dba9-4309-9957-42c6b535611a" />
 
 
 #include <stdio.h>
@@ -43,9 +44,9 @@ int main() {
   
 int numbers[] = {1, 2, 3, 4, 5};
 - Luo taulukon nimeltä numbers, jossa on viisi kokonaislukua.
-- 
+  
 fixed_function(numbers, 5);
 - Kutsuu fixed_function-funktiota ja antaa sille taulukon sekä sen koon (5).
+  
 return 0;
-
-Päättää ohjelman ja palauttaa arvon 0, mikä tarkoittaa onnistunutta suoritusta.
+-Päättää ohjelman ja palauttaa arvon 0, mikä tarkoittaa onnistunutta suoritusta.
