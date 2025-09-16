@@ -109,4 +109,20 @@ print_scrambled(bad_message);
 return 0;
 -Ohjelma päättyy onnistuneesti.
 
+## Lab 2
+Seuraavaksi piti ryöstää lippu:
+
+<img width="601" height="757" alt="lab02 disassembler" src="https://github.com/user-attachments/assets/81350fd3-b857-4899-ba63-0976bc5971cb" />
+
+
+<img width="1672" height="675" alt="lab02 flag password thing" src="https://github.com/user-attachments/assets/4ec5cf00-b08c-408d-b575-8a435d58531a" />
+
+## Mitä tein passtr2o-binäärin kanssa
+
+purin passtr2o-ohjelma GDB:llä ja tutkittin sen konekielistä rakennetta, vaikka siinä ei ollut debug-symbolisia. Disassemblaamalla main-funktion löysin kohdan, jossa ohjelma pyytää käyttäjältä salasanaa scanf-kutsun avulla. Heti sen jälkeen kutsuttiin funktiota nimeltä mAsdf3a, joka tarkisti, oliko syöte oikea.
+
+## Miten löydettiin oikea kohta pysäyttää ohjelma
+
+Disassemblausta tutkimalla näin, että ohjelma käytti rekisteriä %eax tarkistukseen. Jos mAsdf3a palautti arvon 1, ohjelma siirtyi onnistumispolulle. Tämä tapahtui kohdassa:
+
 
