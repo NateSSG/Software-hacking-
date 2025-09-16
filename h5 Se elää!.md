@@ -289,4 +289,4 @@ while (n > 1) {
 
 <a href="https://help.x64dbg.com/en/latest/commands/" target="_blank">DBG_Dokumentaatio</a>
 
-<a href="https://chatgpt.com/" target="_blank">ChatGPT</>
+<a href="https://chatgpt.com/" target="_blank">ChatGPT
