@@ -161,3 +161,14 @@ continue   ; annetaan ohjelman tulostaa lippu
 
 Lippu oli tallennettu muistipaikkaan rbx, joka osoitti puskuria rsp+0x30. Tämä oli se paikka, johon EaseEAs kirjoitti lopullisen lipun.
 
+
+## Lab 3
+Ensiksi tarkistin että mitä se tiedosto oikein tekee: 
+
+
+<img width="355" height="132" alt="lab03_what_is_it_doing" src="https://github.com/user-attachments/assets/3c4e74f6-e0df-481d-a5ad-4bf44d0e7d82" /> 
+
+Sen jälkeen lähdin debuggerilla etsimään salasanaa. Tämä oli aika yksinkertainen. Nuo # merkityt numerot tuossa vieressä tarkoittaa sitä, että ne sisältää jotai stringiä eli siis tekstiä jota pystyy lukemaan. Tutkin kaikki nuo ylhäältä alas ja sieltä sitten näkyi semmoinen string kuin "password1". Lähdin sitten testaamaan ja se olikin oikein!
+
+<img width="1035" height="955" alt="lab03 password____" src="https://github.com/user-attachments/assets/9eef9dd2-b722-47d2-ad15-b3a53a43c26e" />
+
