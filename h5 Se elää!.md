@@ -119,10 +119,38 @@ Seuraavaksi piti ryöstää lippu:
 
 ## Mitä tein passtr2o-binäärin kanssa
 
-purin passtr2o-ohjelma GDB:llä ja tutkittin sen konekielistä rakennetta, vaikka siinä ei ollut debug-symbolisia. Disassemblaamalla main-funktion löysin kohdan, jossa ohjelma pyytää käyttäjältä salasanaa scanf-kutsun avulla. Heti sen jälkeen kutsuttiin funktiota nimeltä mAsdf3a, joka tarkisti, oliko syöte oikea.
+purin passtr2o-ohjelma GDB:llä ja tutkin sen konekielistä rakennetta, vaikka siinä ei ollut debug-symbolisia. Disassemblaamalla main-funktion löysin kohdan, jossa ohjelma pyytää käyttäjältä salasanaa scanf-kutsun avulla. Heti sen jälkeen kutsuin funktiota nimeltä mAsdf3a, joka tarkisti, oliko syöte oikea.
 
-## Miten löydettiin oikea kohta pysäyttää ohjelma
+## Miten löysin oikean kohdan pysäyttää ohjelman
 
 Disassemblausta tutkimalla näin, että ohjelma käytti rekisteriä %eax tarkistukseen. Jos mAsdf3a palautti arvon 1, ohjelma siirtyi onnistumispolulle. Tämä tapahtui kohdassa:
 
+0x0000000000001105: dec %eax
+0x0000000000001107: jne ...
+
+Tämä oli ratkaiseva haarautumiskohta. Asetin keskeytyksen juuri ennen tätä, jotta voin ohjata ohjelman kulkua.
+
+## Miten huijasin ohjelmaa
+
+Kun ohjelma pysähtyi, käytin komentoa: set $eax=1
+
+Tämä sai ohjelman luulemaan, että salasana oli oikein.
+
+Sen jälkeen tein: 
+ni
+ni
+ni
+Kolme kertaa ni (next instruction) askelsi ohjelman eteenpäin:
+
+- lea 0xa(%rsp), %rdi
+
+- dec %eax
+
+- jne ... (joka ei enää hyppää, koska %eax == 0)
+
+Näin päädyttiin onnistumispolulle, joka alkaa kohdasta main+137.
+
+## Miten sain lipun esiin
+
+Kun olin onnistumispolulla, tein:
 
