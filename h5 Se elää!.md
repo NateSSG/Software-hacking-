@@ -285,6 +285,4 @@ while (n > 1) {
 
 ## Lähteet
 
-https://hhmoodle.haaga-helia.fi/pluginfile.php/4346435/mod_folder/content/0/GDB%20Cheat%20Sheet.pdf?forcedownload=1
-
 <a href="https://hhmoodle.haaga-helia.fi/pluginfile.php/4346435/mod_folder/content/0/GDB%20Cheat%20Sheet.pdf?forcedownload=1" target="_blank">Lari_GDP_Cheat_Sheet</a>
