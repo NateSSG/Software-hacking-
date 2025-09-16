@@ -194,7 +194,7 @@ Lähdin sitten siitä purkamaan checkpasswordin ja katsoin mitä sieltä sitten 
 
 ## Miten sain salasanan ?
 
-Kuten mainitsin edellisessä tehtävässä nuo # merkityt numerot ovat stringejä eli tekstejä mitä voi lukea. Avasin kaikki tuolla x/s komennolla ja sain muutamia sanoja ja kirjaimi. Yritin testata toimiiko nämä kirjaimet tuolla järjestyksellä, mutta se ei oikein toiminut. Selailin debuggeria ja huomasin semmoisen jutun kuin "reverse" eli salasana oli varmaan käänteis muodossa. Lähdin saman tien kirjoittamaan salasanaa toisin päin mikä on "cracked".
+Kuten mainitsin edellisessä tehtävässä nuo # merkityt numerot ovat stringejä eli tekstejä mitä voi lukea. Avasin kaikki tuolla x/s komennolla ja sain muutamia sanoja ja kirjaimi. Yritin testata toimiiko nämä kirjaimet tuossa järjestyksessä, mutta se ei oikein toiminut. Selailin debuggeria ja huomasin semmoisen jutun kuin "reverse" eli salasana oli varmaan käänteis muodossa. Lähdin saman tien kirjoittamaan salasanaa toisin päin mikä on "cracked".
 
 <img width="1372" height="28" alt="lab04 reverse pass hint" src="https://github.com/user-attachments/assets/37321d28-10c8-45b5-bcd6-fe6093f0346f" />
 
