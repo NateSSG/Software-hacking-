@@ -172,3 +172,23 @@ Sen jälkeen lähdin debuggerilla etsimään salasanaa. Tämä oli aika yksinker
 
 <img width="1035" height="955" alt="lab03 password____" src="https://github.com/user-attachments/assets/9eef9dd2-b722-47d2-ad15-b3a53a43c26e" />
 
+## Lab 4
+
+Sama juttu eli aluksi katsotaan mitä tiedosto tekee. 
+
+
+<img width="381" height="183" alt="first_need_to_know_what_lab04_does" src="https://github.com/user-attachments/assets/48bd0d4f-c92d-4085-9493-9404df0fcafa" />
+
+Näköjään tässä piti selvittää oikea salasana. 
+
+Ensiksi käynnistin debuggerin ja kirjoitin "disassemble main" sieltä löyty semmoinen kohta kuin checkpassword: 
+
+<img width="1281" height="762" alt="lab04_pass_word_checker_" src="https://github.com/user-attachments/assets/d3d35fa5-ed83-4040-aa08-ce55ebe3a00a" />
+
+Lähdin sitten siitä purkamaan checkpasswordin ja katsoin mitä sieltä sitten löytyi:
+
+
+<img width="983" height="506" alt="lab04_pass_word_puzzle_piece" src="https://github.com/user-attachments/assets/17b41ed6-02ca-4d6d-913b-d28d1da29a83" />
+
+<img width="635" height="102" alt="lab04_pass_word_puzzle_piece2" src="https://github.com/user-attachments/assets/baff5867-7713-48fe-b85f-6378979de334" />
+
