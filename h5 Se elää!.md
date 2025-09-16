@@ -50,3 +50,60 @@ fixed_function(numbers, 5);
   
 return 0;
 -Päättää ohjelman ja palauttaa arvon 0, mikä tarkoittaa onnistunutta suoritusta.
+
+## Lab 1
+Seuraavaksi tein saman jutun lab 1. Ajoin tiedoston ja sieltä tuli sitten tämmöinen viesti. Debugger on todella hyödyllinen tämmöisissä tilanteissa, jossa pitää selvittää mikä koodissa on vikana, kun se tulostaa jotain tuommoista.
+<img width="467" height="100" alt="lab01 error_when_u_run_the_file" src="https://github.com/user-attachments/assets/286710a3-123c-46d1-8ae4-76b9453f486c" />
+
+Ajettuani debuggerin, niin se näytti heti että mikä siinä koodissa oli oikein vikana:
+<img width="588" height="363" alt="lab01 ss bug" src="https://github.com/user-attachments/assets/3b980650-4a90-44d5-8f7c-c9cece8e76d1" />
+
+Ongelma näyttää olevan rivillä 13. Tämä meinaa sitä, että koodi epäonnistuu, koska funktio yrittää käsitellä viestiä, joka on NULL, eli tyhjä osoitin. Ilman tarkistusta se johtaa virheeseen, koska ohjelma yrittää lukea muistista kohtaa, jota ei ole olemassa.
+
+## Korjattu koodi Lab 1 
+
+Seuraavaksi lähdetään korjaamaan koodia.
+
+<img width="502" height="535" alt="lab01 fixed code" src="https://github.com/user-attachments/assets/6168ed75-933f-4711-96f7-9ef8cc10572d" />
+
+Päivitetty koodi toimii oikein, koska se tarkistaa ensin, onko viesti NULL ennen kuin yrittää käsitellä sitä. Jos viesti on tyhjä, se tulostaa "[null message]" eikä yritä lukea muistista virheellistä osoitetta. Vanha koodi taas kaatui, koska se ei tehnyt tarkistusta ja yritti käyttää NULL-osoitinta, mikä johti virheeseen.
+
+## Mitä koodissa tapahtuu rivi riviltä
+
+#include <stdio.h>
+- Tuo mukaan standardikirjaston, joka sisältää printf- ja putchar-funktiot tulostamista varten.
+  
+void print_scrambled(char *msg) {
+-Määrittelee funktion, joka ottaa parametriksi merkkijonon osoittimen (msg). Tämä voi olla joko oikea viesti tai NULL.
+
+if (msg == NULL) {
+-Tarkistaa, onko viesti tyhjä (eli NULL). Jos on, ohjelma ei yritä käsitellä sitä.
+
+printf("[null message]\n"); return;
+-Tulostaa varoituksen "[null message]" ja lopettaa funktion ennen kuin yritetään käyttää virheellistä muistiosoitetta.
+
+while (*msg) { putchar(*msg); msg++; }
+- Jos viesti ei ole NULL, tämä silmukka käy läpi merkkijonon merkki kerrallaan ja tulostaa sen. putchar tulostaa yhden merkin, ja msg++ siirtyy seuraavaan merkkiin.
+- 
+printf("\n");
+- Tulostaa rivinvaihdon lopuksi, jotta tulostus näyttää siistiltä.
+
+int main() {
+- Ohjelman aloituspiste.
+  
+char *bad_message = NULL;
+- Määrittelee tyhjän viestin, joka ei osoita mihinkään muistipaikkaan.
+  
+char *good_message = "Hello, world.";
+- Määrittelee oikean viestin, joka sisältää tekstin "Hello, world."
+  
+print_scrambled(good_message);
+- Kutsuu funktion oikealla viestillä, joka tulostetaan merkki kerrallaan.
+  
+print_scrambled(bad_message);
+- Kutsuu funktion tyhjällä viestillä. Koska msg == NULL, tulostetaan "[null message]" eikä ohjelma kaadu.
+
+return 0;
+-Ohjelma päättyy onnistuneesti.
+
+
