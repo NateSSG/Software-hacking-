@@ -61,7 +61,7 @@ Ajettuani debuggerin, niin se näytti heti että mikä siinä koodissa oli oikei
 <img width="581" height="363" alt="lab01 ss_code" src="https://github.com/user-attachments/assets/10c90f40-b07a-4805-a279-919c52f9779c" />
 
 
-Ongelma näyttää olevan rivillä 13. Tämä meinaa sitä, että koodi epäonnistuu, koska funktio yrittää käsitellä viestiä, joka on NULL, eli tyhjä osoitin. Ilman tarkistusta se johtaa virheeseen, koska ohjelma yrittää lukea muistista kohtaa, jota ei ole olemassa.
+Ongelma näyttää olevan rivillä 14. Tämä meinaa sitä, että koodi epäonnistuu, koska funktio yrittää käsitellä viestiä, joka on NULL, eli tyhjä osoitin. Ilman tarkistusta se johtaa virheeseen, koska ohjelma yrittää lukea muistista kohtaa, jota ei ole olemassa.
 
 ## Korjattu koodi Lab 1 
 
