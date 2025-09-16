@@ -222,4 +222,62 @@ Tässä tehtävässä suoritus ei toiminut laisinkaan eikä myöskään debugger
 
 - Mahdollisesti puuttuvat kirjastot Jos #include <iostream> ja using namespace std; puuttuvat, cin ja cout eivät toimi, koska ne eivät ole määriteltyinä.
 
+## Miksi korjattu koodi toimii
 
+- Aaltosulkeet on lisätty, joten funktiorakenteet ovat selkeät ja kääntäjä ymmärtää, missä funktiot alkavat ja loppuvat.
+
+- Kertolaskusilmukka käyttää ehtoa while (n > 1), jolloin nollaa ei koskaan kerrota mukaan.
+
+- Tarvittavat kirjastot on mukana, joten cin ja cout toimivat oikein.
+
+## Rivi riviltä selitys korjatusta koodista
+
+#include <iostream>
+- Tuo iostream-kirjaston, joka tarvitaan cin ja cout-toimintoihin.
+
+using namespace std;
+- Mahdollistaa cin ja cout ilman std::-etuliitettä.
+
+long factorial(int n);
+- Etukäteisilmoitus funktiosta factorial, jotta main() voi kutsua sitä.
+
+int main() {
+- Ohjelman aloituspiste.
+
+int n = 0;
+-Alustaa muuttujan n, johon käyttäjän syöte tallennetaan.
+
+cin >> n;
+- Lukee käyttäjältä kokonaisluvun.
+
+long val = factorial(n);
+- Kutsuu factorial-funktion ja tallentaa tuloksen muuttujaan val.
+
+cout << val << endl;
+- Tulostaa kertolaskun tuloksen ja rivinvaihdon.
+
+cin.get();
+- Odottaa Enter-näppäintä ennen ohjelman sulkeutumista (valinnainen).
+
+    return 0;
+}
+
+- Päättää ohjelman ja palauttaa arvon 0, mikä tarkoittaa onnistunutta suoritusta.
+
+long factorial(int n) {
+- Määrittelee funktion, joka laskee luvun n kertoman ja palauttaa sen pitkänä kokonaislukuna.
+
+long result = 1;
+- Alustaa muuttujan result arvolla 1, johon kertolasku tallennetaan.
+
+while (n > 1) {
+        result *= n;
+        n--;
+    }
+
+- Silmukka jatkuu niin kauan kuin n on suurempi kuin 1. Jokaisella kierroksella result kerrotaan n:llä ja n pienenee yhdellä.
+
+    return result;
+}
+
+- Palauttaa lopullisen kertolaskun tuloksen.
