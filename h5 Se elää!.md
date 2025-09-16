@@ -192,3 +192,10 @@ Lähdin sitten siitä purkamaan checkpasswordin ja katsoin mitä sieltä sitten 
 
 <img width="635" height="102" alt="lab04_pass_word_puzzle_piece2" src="https://github.com/user-attachments/assets/baff5867-7713-48fe-b85f-6378979de334" />
 
+## Miten sain salasanan ?
+
+Kuten mainitsin edellisessä tehtävässä nuo # merkityt numerot ovat stringejä eli tekstejä mitä voi lukea. Avasin kaikki tuolla x/s komennolla ja sain muutamia sanoja ja kirjaimi. Yritin testata toimiiko nämä kirjaimet tuolla järjestyksellä, mutta se ei oikein toiminut. Selailin debuggeria ja huomasin semmoisen jutun kuin "reverse" eli salasana oli varmaan käänteis muodossa. Lähdin saman tien kirjoittamaan salasanaa toisin päin mikä on "cracked".
+
+<img width="237" height="161" alt="lab04_pass_word_listing" src="https://github.com/user-attachments/assets/37857e0c-4398-4af6-8486-543864519aaa" />
+
+
