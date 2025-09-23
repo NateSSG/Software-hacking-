@@ -80,3 +80,6 @@ Binwalkin avulla selvisi, että h1.jpg sisältää piilotettuna ZIP-arkiston, jo
 
 <img width="1266" height="462" alt="extracted binwalk jpg" src="https://github.com/user-attachments/assets/055675ec-8c4f-4537-9ad2-4a30fa644929" />
 
+<img width="672" height="223" alt="495zip is a word document" src="https://github.com/user-attachments/assets/0e5df7b5-1bbd-4515-851d-028374685e0c" />
+
+
