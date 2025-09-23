@@ -44,3 +44,39 @@ ________________________________________________________________________________
 
 
 ## Lab 1
+
+<img width="1338" height="491" alt="binwalk jpg image" src="https://github.com/user-attachments/assets/3b7a11f5-7d7c-4b58-94ea-66405ef1d4bc" />
+
+## 🔎 Mitä tietoja löytyi?
+
+binwalk-analyysin perusteella h1.jpg sisältää normaalin JPEG-kuvatiedoston lisäksi upotettuja ZIP-arkistoja, joista paljastui useita DOCX-tiedostolle tyypillisiä osia:
+
+- [Content_Types].xml
+
+- word/document.xml (dokumentin sisältö)
+
+- word/styles.xml, word/theme/theme1.xml (muotoilut ja tyylit)
+
+- docProps/core.xml, docProps/app.xml (dokumentin metatiedot)
+
+Tämä tarkoittaa, että kuvaan on piilotettu Word-dokumentti (steganografia tai liitetty data).
+
+
+## 🛠 Mitä työkalua käyttäisit tiedostojen erottamiseen?
+
+- binwalk -e h1.jpg → purkaa automaattisesti löydetyt arkistot ja tallentaa ne hakemistoon.
+
+- unzip → koska sisältö on ZIP-muodossa, voit purkaa ne manuaalisesti:
+    unzip extracted.zip -d output_folder
+  
+- 7z (p7zip) → toimii vaihtoehtoisena purkutyökaluna.
+
+Näin saat talteen Word-dokumentin sisällön ja voit avata sen esimerkiksi LibreOffice:lla tai analysoida suoraan XML-tiedostoja.
+
+## Eli mitä tästä nyt selvisi? 
+
+Binwalkin avulla selvisi, että h1.jpg sisältää piilotettuna ZIP-arkiston, jossa on Microsoft Word -dokumentin rakenteeseen kuuluvia tiedostoja. Näiden erottamiseen ja tarkempaan tutkimiseen voisi käyttää esimerkiksi binwalk -e -komentoa tai unzip-työkalua. Näin voidaan palauttaa ja analysoida piilotetun dokumentin sisältö.
+
+
+<img width="1266" height="462" alt="extracted binwalk jpg" src="https://github.com/user-attachments/assets/055675ec-8c4f-4537-9ad2-4a30fa644929" />
+
