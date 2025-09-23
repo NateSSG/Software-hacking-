@@ -18,8 +18,13 @@ Network: NAT
 
 Analysoidessani 01.jpg-tiedostoa käytin perusanalyysityökaluja, kuten strings-komentoa ja hekseditoria, saadakseni esiin luettavaa tekstiä ja metatietoja, jotka olivat upotettuina kuvaan. Suorittamalla strings 01.jpg, mutta sieltä ei tullut oikeastaan mitään esiin.
 
-
 <img width="560" height="470" alt="jpg file strings" src="https://github.com/user-attachments/assets/acfbdb8f-b1c8-43b9-a590-b27ea14ae042" />
+
+Seuraavaksi kirjoitin file 01.jpg. Tuolla komennolla saadaan tietää mikä tiedosto tyyppi se on, mutta se jo tiedettiin koska sen pääte oli .jpg, mutta kuitenkin hyvä varmistaa koska sen nimi voi olla jpg, mutta oikeasti exe tyyppinen tiedosto.
+
+<img width="1666" height="73" alt="file command on jpg image" src="https://github.com/user-attachments/assets/60a56b21-70a7-46be-b5d8-e30357e4f8c2" />
+
+
 
 <img width="542" height="673" alt="exiftool the jpg file" src="https://github.com/user-attachments/assets/1460e514-37d0-4e3a-9ff0-8270a9ea561c" />
 
