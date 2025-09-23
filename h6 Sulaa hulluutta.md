@@ -82,4 +82,59 @@ Binwalkin avulla selvisi, että h1.jpg sisältää piilotettuna ZIP-arkiston, jo
 
 <img width="672" height="223" alt="495zip is a word document" src="https://github.com/user-attachments/assets/0e5df7b5-1bbd-4515-851d-028374685e0c" />
 
+## Lab 2
+
+## 🔗 Valittu APK
+
+Lab 2:ssa valitsin analysoitavaksi MusicRecognizer-sovelluksen GitHubista:
+👉 https://github.com/aleksey-saenko/MusicRecognizer
+
+APK ladattiin ja analysoitiin kahdella työkalulla: JADX ja Bytecode-Viewer.
+
+
+## 🔍 Käytetyt työkalut
+
+JADX:
+
+- Purkaa APK:n sisältämät classes.dex-tiedostot selkokieliseen Java-lähdekoodiin.
+
+- Näyttää projektin rakenteen selkeästi puumaisessa näkymässä (paketit, luokat, resurssit).
+
+- Hyvä koodin lukemiseen ja ohjelman logiikan hahmottamiseen.
+
+Bytecode-Viewer:
+
+- Näyttää APK:n luokat suoraan Java bytecode -muodossa sekä vaihtoehtoisesti dekompiloituna.
+
+- Sisältää useita dekompilaattoreita (esim. Fernflower, CFR), mikä mahdollistaa koodin vertailun.
+
+- Parempi, jos halutaan nähdä tarkasti mitä virtuaalikone ajaa (bytecode-taso).
+
+Samankaltaisuudet: Molemmat purkavat APK:n ja antavat mahdollisuuden tarkastella koodia, resursseja ja sovelluksen rakennetta.
+Erot: JADX keskittyy selkeään ja luettavaan Java-koodiin, kun taas Bytecode-Viewer mahdollistaa matalamman tason bytecode-analyysin ja dekompilaattorien vertailun.
+
+## 📑 Mitä tietoa APK:sta löytyi
+
+Analysoimalla APK:n sisältöä löysin seuraavia asioita:
+
+- Data-mallit: Sovelluksen käyttämät tiedonrakenteet (esim. äänidatan käsittelyyn ja tallennukseen liittyvät mallit).
+
+- Käyttöliittymän tiedot: Aktiviteetit ja layout-resurssit, jotka kuvaavat sovelluksen näkymät.
+
+- Verkkokäyttö: Luokat ja metodit, joissa hyödynnetään verkkoa (API-yhteydet ja tiedonsiirto).
+
+- Musiikin tunnistuslogiikka: Pääkoodi, joka toteuttaa äänentallennuksen ja sen tunnistuksen.
+
+- Resurssikansio: Sisälsi mm. näyteäänitiedostoja, joita sovellus käyttää testaukseen tai esittelyyn.
+
+- Toiminnallisuudet: Koodista löytyi viittauksia mm. tunnistuksen peruuttamiseen ja poistamiseen.
+
+- Varmuuskopiot ja tietokanta: Sovellukseen liittyi myös tiedostoja ja luokkia, jotka hallitsevat käyttäjän tietoja ja varmuuskopiointia.
+
+Vaikka suurin osa oli koodia, luokkien ja tiedostonimien perusteella oli mahdollista muodostaa kokonaiskuva siitä, mistä eri osista sovellus koostuu ja mitä toiminnallisuuksia siihen sisältyy.
+
+## Yhteenveto 
+
+JADX tarjosi paremmin luettavaa lähdekoodia, kun taas Bytecode-Viewer täydensi analyysia tarkemmalla näkymällä bytecodeen. Näiden avulla saatiin selville sovelluksen rakenne, käyttöliittymä, verkon käyttö, tunnistustoiminnallisuudet ja siihen liittyvät resurssit.
+
 
