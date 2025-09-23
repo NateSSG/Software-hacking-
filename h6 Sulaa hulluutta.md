@@ -159,11 +159,6 @@ JADX tarjosi paremmin luettavaa lähdekoodia, kun taas Bytecode-Viewer täydensi
 
 ## Lähteet
 
-https://hhmoodle.haaga-helia.fi/mod/folder/view.php?id=3329191
-
-https://github.com/aleksey-saenko/MusicRecognizer
-
-
-<a href="https://github.com/aleksey-saenko/MusicRecognizer">MusicRecognizer</a>, <a href="https://hhmoodle.haaga-helia.fi/mod/folder/view.php?id=3329191">Larin tehtävä</a>
-
+<a href="https://github.com/aleksey-saenko/MusicRecognizer">MusicRecognizer</a>, <a href="https://hhmoodle.haaga-helia.fi/mod/folder/view.php?id=3329191">Larin tehtävä</a>, 
+<a href="https://github.com/offa/android-foss">android-foss</a>, <a href="https://github.com/skylot/jadx">jadx</a>, <a href="https://github.com/Konloch/bytecode-viewer/">bytecode-viewer</a>
 
