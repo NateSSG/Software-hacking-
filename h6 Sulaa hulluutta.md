@@ -104,6 +104,9 @@ JADX:
 
 Bytecode-Viewer:
 
+<img width="1707" height="890" alt="Bytecode Viewer UI review" src="https://github.com/user-attachments/assets/7173a6d6-8158-4c8f-846d-f43f86639a45" />
+
+
 - Näyttää APK:n luokat suoraan Java bytecode -muodossa sekä vaihtoehtoisesti dekompiloituna.
 
 - Sisältää useita dekompilaattoreita (esim. Fernflower, CFR), mikä mahdollistaa koodin vertailun.
@@ -136,5 +139,31 @@ Vaikka suurin osa oli koodia, luokkien ja tiedostonimien perusteella oli mahdoll
 ## Yhteenveto 
 
 JADX tarjosi paremmin luettavaa lähdekoodia, kun taas Bytecode-Viewer täydensi analyysia tarkemmalla näkymällä bytecodeen. Näiden avulla saatiin selville sovelluksen rakenne, käyttöliittymä, verkon käyttö, tunnistustoiminnallisuudet ja siihen liittyvät resurssit.
+
+## Kuvat
+<img width="312" height="282" alt="application database" src="https://github.com/user-attachments/assets/8798b8cb-e0c0-4ce9-87a9-75bc3bac71d0" />
+
+<img width="1117" height="707" alt="backup files" src="https://github.com/user-attachments/assets/237873e1-c36d-4309-9e9e-f5fe9cb85537" />
+
+<img width="1195" height="596" alt="music recorder_recognition" src="https://github.com/user-attachments/assets/b74efbaa-25f7-4152-95db-4fabbc44a81b" />
+
+<img width="1196" height="632" alt="network usage" src="https://github.com/user-attachments/assets/35f4f246-a1b0-4f71-9f2b-fb951e25f0da" />
+
+<img width="1715" height="901" alt="the heart of the android app aka the code" src="https://github.com/user-attachments/assets/3e1baf13-ef45-416e-aedc-6708079f789f" />
+
+<img width="400" height="107" alt="resources folder test sample sound" src="https://github.com/user-attachments/assets/ce6dd0a9-11b5-45a9-b7bd-5fe52a7d20e1" />
+
+<img width="371" height="243" alt="recognition cancelling and disabeling" src="https://github.com/user-attachments/assets/e7ffab9e-1175-4ad8-9b29-c3a94af582bd" />
+
+<img width="367" height="531" alt="info about user interface" src="https://github.com/user-attachments/assets/e85ff95e-eb0d-49d5-b584-917bedd61c53" />
+
+## Lähteet
+
+https://hhmoodle.haaga-helia.fi/mod/folder/view.php?id=3329191
+
+https://github.com/aleksey-saenko/MusicRecognizer
+
+
+<a href="https://github.com/aleksey-saenko/MusicRecognizer">MusicRecognizer</a>, <a href="https://hhmoodle.haaga-helia.fi/mod/folder/view.php?id=3329191">Larin tehtävä</a>
 
 
