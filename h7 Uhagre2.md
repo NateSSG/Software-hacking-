@@ -30,4 +30,4 @@ Ongelmananto: Muunna heksadesimaalimerkkijono base64-muotoon noudattaen periaate
 
 - .toString('base64') muuntaa tavut base64-muotoon
 
-- Prosessi noudattaa raakadataprinsiippiä täysin
+<img width="687" height="118" alt="terminal 1" src="https://github.com/user-attachments/assets/044ee00b-3820-409e-9bea-309db32e1be3" />
