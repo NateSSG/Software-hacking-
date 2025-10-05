@@ -55,6 +55,18 @@ Ongelmananto: Etsi yhden merkin avain, jolla viesti on XOR-salattu, ja pura sala
 
 <img width="707" height="592" alt="task 3" src="https://github.com/user-attachments/assets/4898ece1-40ad-4f92-b12f-cdd48ce11a16" />
 
+## Koodi selitetty rivi-riviltä: 
+- Muuntaa heksadesimaalimerkkijonon tavutaulukoksi (Buffer) Esim: "1b3737..." → [27, 55, 55, ...]
+- Alustetaan muuttujat parhaan tuloksen seuraamiseen
+- Kokeilee jokaista mahdollista 1-tavun avainta (0-255)
+- Luo tulostustavutaulukon samalla koolla kuin salattu data
+- Suorittaa XOR-operaation jokaiselle tavulle salatussa datassa
+- XOR: salattu_tavu ⊕ avain = purettu_tavu
+- Muuntaa puretut tavut tekstiksi
+- Arvioi tekstin laatua englantilaisen tekstin taajuuksilla
+- Jos tämä tulos on parempi kuin edellinen paras, tallennetaan se
+- Palauttaa parhaan löydetyn tuloksen
+
 <img width="562" height="467" alt="task 4" src="https://github.com/user-attachments/assets/ae163947-1e06-405a-9037-375277771554" />
 
 
@@ -71,6 +83,11 @@ Löydetyt tulokset:
 - Avain: 0x58 (merkki 'X')
 
 - Purettu viesti: "Cooking MC's like a pound of bacon"
+
+<img width="447" height="113" alt="terminal 3" src="https://github.com/user-attachments/assets/6ddf2f13-8be3-4f88-be43-37612e326812" />
+
+<img width="487" height="106" alt="terminal 4" src="https://github.com/user-attachments/assets/278bbc77-834c-40ab-b12c-ddc8a579bbf0" />
+
 
 
 
