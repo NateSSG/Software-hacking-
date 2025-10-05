@@ -102,12 +102,14 @@ Rivit 12-18: Tallennetaan uusi paras tulos:
 ## Käytännön esimerkki:
 
 Oletetaan että meillä on 3 salattua merkkijonoa:
+```
 const hexStrings = [
     "0e3647e8592d35514a081243582536ed3de67340",  // Rivi 1 - satunnaista dataa
     "1b37373331363f78151b7f2b783431333d783978",  // Rivi 2 - XOR-salattu teksti
     "334b041de124f73c18011a50e608097ac308ecee"   // Rivi 3 - satunnaista dataa
 ];
 
+```
 ## Mitä funktio tekee vaiheittain:
 
 Rivi 1: singleByteXORCipher palauttaa matalan pistemäärän (esim. 15.2)
