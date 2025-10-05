@@ -49,4 +49,28 @@ Ongelmananto: Luo funktio, joka suorittaa XOR-operaation kahdelle samanpituisell
 
 <img width="462" height="127" alt="terminal 2" src="https://github.com/user-attachments/assets/0a2d494d-8496-4e90-95e8-0bf9bfc18fc2" />
 
+## Haaste 3 & 4: XOR-salauksen murtaminen
+
+Ongelmananto: Etsi yhden merkin avain, jolla viesti on XOR-salattu, ja pura salaus.
+
+<img width="707" height="592" alt="task 3" src="https://github.com/user-attachments/assets/4898ece1-40ad-4f92-b12f-cdd48ce11a16" />
+
+<img width="562" height="467" alt="task 4" src="https://github.com/user-attachments/assets/ae163947-1e06-405a-9037-375277771554" />
+
+
+## Ratkaisustrategia:
+
+- Brute force -lähestymistapa: Kokeile jokaista mahdollista 256 tavun avainta
+
+- Tekstinlaadun arviointi: Käytä englantilaisen kielen kirjaintaajuuksia
+
+- Pistemääräjärjestelmä: Valitse korkeimman pistemäärän saanut tulos
+
+Löydetyt tulokset:
+
+- Avain: 0x58 (merkki 'X')
+
+- Purettu viesti: "Cooking MC's like a pound of bacon"
+
+
 
