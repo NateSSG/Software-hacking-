@@ -17,3 +17,17 @@ Processor: AMD Ryzen 7 5700x  4 cores used
 Disk: 90 GB
 
 Network: NAT
+
+## Convert hex to base64
+
+Ongelmananto: Muunna heksadesimaalimerkkijono base64-muotoon noudattaen periaatetta "aina työskentele raakabyteillä".
+
+<img width="600" height="161" alt="task 1" src="https://github.com/user-attachments/assets/b8c99c6b-ae88-4b4f-85d0-588696959cd0" />
+
+## Miten se toimii:     
+
+- Buffer.from(hexString, 'hex') muuntaa heksamerkit raakatavuisiksi
+
+- .toString('base64') muuntaa tavut base64-muotoon
+
+- Prosessi noudattaa raakadataprinsiippiä täysin
