@@ -18,6 +18,10 @@ Disk: 90 GB
 
 Network: NAT
 
+IDE: Visual studio Code 
+
+Language: JavaScript (Node.js)
+
 ## Convert hex to base64
 
 Ongelmananto: Muunna heksadesimaalimerkkijono base64-muotoon noudattaen periaatetta "aina työskentele raakabyteillä".
@@ -208,6 +212,15 @@ Löydetyt tulokset:
 <img width="447" height="113" alt="terminal 3" src="https://github.com/user-attachments/assets/6ddf2f13-8be3-4f88-be43-37612e326812" />
 
 <img width="487" height="106" alt="terminal 4" src="https://github.com/user-attachments/assets/278bbc77-834c-40ab-b12c-ddc8a579bbf0" />
+
+## Käytetyt työkalut:
+- VS Coden integroitu terminaali testaamiseen
+- Node.js:n Buffer-luokka tavujen käsittelyyn
+- Console.log debuggaukseen ja varmistukseen
+
+## Lähteet
+
+
 
 
 
