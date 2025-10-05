@@ -67,13 +67,81 @@ Ongelmananto: Etsi yhden merkin avain, jolla viesti on XOR-salattu, ja pura sala
 - Jos tämä tulos on parempi kuin edellinen paras, tallennetaan se
 - Palauttaa parhaan löydetyn tuloksen
 
+## Haaste 4 koodi selitys
+
+- Rivi 1: Funktio saa parametrina taulukon heksamerkkijonoja, joista yksi on salattu yhden merkin XOR:lla.
+
+Rivi 3: Alustetaan muuttuja, joka pitää kirjaa parhaasta löydetystä tuloksesta:
+- text: Parhaaksi arvioitu purettu teksti
+- score: Parhaan tuloksen pistemäärä
+- line: Rivinumero, jolla paras tulos löytyi
+
+Rivi 6: Käydään läpi jokainen salattu merkkijono taulukossa:
+- hexString: Yksi salattu heksamerkkijono
+- lineNum: Nykyisen merkkijonon indeksi taulukossa (0, 1, 2, ...)
+
+Rivi 8: Käytetään edellisen haasteen funktiota purkamaan tämä merkkijono:
+- singleByteXORCipher kokeilee kaikkia 256 avainta
+- Se palauttaa objektin: { key, text, score }
+- result sisältää parhaan löydetyn tuloksen tälle merkkijonolle
+
+Rivi 11: Verrataan tuloksen laatua parhaaseen tähän mennessä löydettyyn:
+- Tarkistetaan onko tämän merkkijonon paras tulos parempi kuin globaali paras
+- Vertailu tehdään pistemäärän perusteella
+
+Rivit 12-18: Tallennetaan uusi paras tulos:
+- text: Kopioidaan purettu teksti
+- score: Kopioidaan pistemäärä
+- line: lineNum + 1: Lasketaan oikea rivinumero (käyttäjälle ystävällisempi)
+- key: Tallennetaan käytetty avain
+
+- Rivi 19: forEach-silmukan loppu - toistetaan jokaiselle merkkijonolle taulukossa.
+
+- Rivi 22: Palautetaan paras löydetty tulos koko taulukosta.
+
+## Käytännön esimerkki:
+
+Oletetaan että meillä on 3 salattua merkkijonoa:
+const hexStrings = [
+    "0e3647e8592d35514a081243582536ed3de67340",  // Rivi 1 - satunnaista dataa
+    "1b37373331363f78151b7f2b783431333d783978",  // Rivi 2 - XOR-salattu teksti
+    "334b041de124f73c18011a50e608097ac308ecee"   // Rivi 3 - satunnaista dataa
+];
+
+## Mitä funktio tekee vaiheittain:
+
+Rivi 1: singleByteXORCipher palauttaa matalan pistemäärän (esim. 15.2)
+- Ei parempi kuin alkuperäinen 0 → ei tallenneta
+Rivi 2: singleByteXORCipher löytää tekstin "Cooking MC's like..." pistemäärällä 174.6
+- Parempi kuin edellinen paras (0) → TALLENNETAAN
+- bestOverall nyt: { text: "Cooking...", score: 174.6, line: 2, key: 88 }
+Rivi 3: singleByteXORCipher palauttaa matalan pistemäärän (esim. 22.1)
+- Ei parempi kuin 174.6 → ei tallenneta
+Lopputulos: Funktio palauttaa objektin riville 2
+
+## Miks tää toimii?
+
+- Useimmat merkkijonot ovat satunnaista dataa → matalat pistemäärät
+- Yksi merkkijono on oikeasti salattu teksti → korkea pistemäärä
+- Korkein pistemäärä kertoo mikä merkkijono oli salattu
+
+## Miten tää liittyy haasteeseen 4?
+Haasteessa 4 annetaan satoja salattuja merkkijonoja, joista vain yksi on oikeasti XOR-salattu englanninkielinen teksti. Tämä funktio löytää sen automaattisesti!
+
+Yksinkertaisesti sanottuna: Tämä funktio on "etsi neula heinäsuovasta" -työkalu salatuille viesteille!
+
+
+
+
+
+
 <img width="562" height="467" alt="task 4" src="https://github.com/user-attachments/assets/ae163947-1e06-405a-9037-375277771554" />
 
 ## Apufunktio 
 
 <img width="808" height="368" alt="apufunktio" src="https://github.com/user-attachments/assets/32754e01-d7a6-415e-af75-fd3532db0b06" />
 
-## Rivi-riviltä selitys: 
+## Koodi rivi-riviltä selitys: 
 
 - Rivi 1: Funktio saa parametrina tekstin, jonka laatua halutaan arvioida.
 Rivit 2-6: Luodaan taulukko, joka kertoo kunkin merkin esiintymistiheyden englannin kielisessä tekstissä prosentteina:
