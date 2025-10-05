@@ -69,6 +69,57 @@ Ongelmananto: Etsi yhden merkin avain, jolla viesti on XOR-salattu, ja pura sala
 
 <img width="562" height="467" alt="task 4" src="https://github.com/user-attachments/assets/ae163947-1e06-405a-9037-375277771554" />
 
+## Apufunktio 
+
+<img width="808" height="368" alt="apufunktio" src="https://github.com/user-attachments/assets/32754e01-d7a6-415e-af75-fd3532db0b06" />
+
+## Rivi-riviltä selitys: 
+
+- Rivi 1: Funktio saa parametrina tekstin, jonka laatua halutaan arvioida.
+Rivit 2-6: Luodaan taulukko, joka kertoo kunkin merkin esiintymistiheyden englannin kielisessä tekstissä prosentteina:
+- ' ': 15 → Välilyönti esiintyy noin 15% ajasta
+
+- 'e': 12.7 → Kirjain 'e' esiintyy noin 12.7% ajasta
+
+- 't': 9.1 → Kirjain 't' esiintyy noin 9.1% ajasta
+
+- ...ja niin edelleen
+
+- Rivi 8: Alustetaan pistemäärä nollaksi.
+
+Rivi 10: Käydään läpi jokainen merkki syötetekstissä:
+  - text.toLowerCase() muuntaa kaikki kirjaimet pieniksi, jotta 'E' ja 'e' käsitellään samana
+
+  - char sisältää yhden merkin kerrallaan
+
+Rivi 12: Tämä on funktion ydinrivi:
+- freq[char] hakee merkin taajuusarvon taulukosta
+- || 0 tarkoittaa: "jos taulukossa ei ole arvoa tälle merkille, käytä nollaa"
+- score += lisää löydetyn arvon kokonaispistemäärään
+
+- Rivi 14: Palautetaan laskettu kokonaispistemäärä.
+
+## Miks tää toimii salauksen murtamisessa? 
+
+- Oikea salaus → Tekstiksi tulee "Cooking MC's like..." → Korkea pistemäärä
+
+- Väärä salaus → Tekstiksi tulee "×°¶§¤@" → Matala pistemäärä
+
+- Korkein pistemäärä = Todennäköisimmin oikea salaus
+
+## Miten tää auttaa haasteessa 3?
+
+Kun kokeilemme 256 eri avainta:
+
+- 255 väärää avainta tuottavat satunnaista "roskaa" → matala pistemäärä
+- 1 oikea avain tuottaa englanninkielistä tekstiä → korkea pistemäärä
+- Valitsemme sen avaimen, joka antai korkeimman pistemäärän
+
+Yksinkertaisesti sanottuna: Tämä funktio toimii "englannin kielen tunnistimena".
+
+
+
+
 
 ## Ratkaisustrategia:
 
