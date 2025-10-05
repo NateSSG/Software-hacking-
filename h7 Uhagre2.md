@@ -234,7 +234,7 @@ Löydetyt tulokset:
 - Console.log debuggaukseen ja varmistukseen
 
 ## Lähteet
-<a href="https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/08_chap01.html#chap01-sec001">E-Kirja</a>, <a href="https://stackoverflow.com/">Stack Overflow</a>,<a href="https://stackoverflow.com/">Cryptopals Overflow</a>
+<a href="https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/08_chap01.html#chap01-sec001">E-Kirja</a>, <a href="https://stackoverflow.com/">Stack Overflow</a>,<a href="https://cryptopals.com/sets/1">Cryptopals Overflow</a>
 
 
 
