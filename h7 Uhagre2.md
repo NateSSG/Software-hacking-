@@ -227,6 +227,9 @@ Löydetyt tulokset:
 
 ## Käytetyt työkalut:
 - VS Coden integroitu terminaali testaamiseen
+<img width="1121" height="570" alt="console_log_answers" src="https://github.com/user-attachments/assets/28a987bc-6cb9-4963-b37e-f2a9a087fef5" />
+
+
 - Node.js:n Buffer-luokka tavujen käsittelyyn
 - Console.log debuggaukseen ja varmistukseen
 
