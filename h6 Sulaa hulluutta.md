@@ -160,5 +160,5 @@ JADX tarjosi paremmin luettavaa lähdekoodia, kun taas Bytecode-Viewer täydensi
 ## Lähteet
 
 <a href="https://github.com/aleksey-saenko/MusicRecognizer">MusicRecognizer</a>, <a href="https://hhmoodle.haaga-helia.fi/mod/folder/view.php?id=3329191">Larin tehtävä</a>, 
-<a href="https://github.com/offa/android-foss">android-foss</a>, <a href="https://github.com/skylot/jadx">jadx</a>, <a href="https://github.com/Konloch/bytecode-viewer/">bytecode-viewer</a>, <a href="https://cryptopals.com/sets/1">Cryptopals</a>
+<a href="https://github.com/offa/android-foss">android-foss</a>, <a href="https://github.com/skylot/jadx">jadx</a>, <a href="https://github.com/Konloch/bytecode-viewer/">bytecode-viewer</a>
 
